@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Canteen - Đặt món thông minh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Be Vietnam Pro',sans-serif;
+}
+body{
+    background:#FFFDF5;
+    color;#4E4637
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    background:#fff;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:28px;
+    font-weight:800;
+    color:#000000;
+}
+
+.logo-icon{
+    width:60px;
+    height:60px;
+    background:#FFC107;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    font-weight:900;
+    color:#222;
+    box-shadow:0 10px 25px rgba(255,193,7,.45);
+    transition:.3s;
+}
+
+.logo-icon:hover{
+    transform:scale(1.08) rotate(-5deg);
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:30px;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#F6C453;
+}
+
+/* HERO */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+    padding:80px;
+    min-height:85vh;
+}
+
+.hero-text{  color:#C49000
+    flex:1;
+}
+
+.hero h1{
+    font-family: 'Lexend',sans-serif;
+    font-size:58px;
+    font-weight:800;
+    line-height:1.15;
+    color:#C89500;
+    letter-spacing:-1px;
+    text-shadow: 0 6px 20px rgba(246,196,83,.25);
+}
+
+.hero h1 span{
+    color:#F6C453;
+}
+
+.hero p{
+    font-size:21px;
+    line-height:38px;
+    margin-bottom:35px;
+}
+
+.hero-images{
+    flex:1;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-main,
+.hero-small{
+    width:280px;
+    height:380px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+    transition:.35s;
+}
+
+.hero-main:hover,
+.hero-small:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:50px;
+    margin-right:15px;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:#F6C453;
+    color:#5B4B2A;
+}
+.btn-primary:hover{
+    background:#E9B63A;
+}
+.btn-secondary{
+     border:2px solid #F6C453;
+    color:#C89500;
+}
+
+.btn-secondary:hover{
+    background:#F6C453;
+    color:white;
+}
+
+/* SECTION */
+
+section{
+    padding:55px 80px;}
+
+section h2{
+    text-align:center;
+    font-size:38px;
+    color:#C89500;
+    margin-bottom:28px;
+}
+/* ABOUT */
+.about-box{
+    max-width:1200px;
+    margin:0 auto;
+    background:#ffffff;
+    padding:45px 50px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    border:2px solid #FFE7A1;
+    transition:.3s;
+}
+
+.about-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.about-box p{
+    font-size:18px;
+    line-height:34px;
+    text-align:justify;
+}
+
+
+
+/* FEATURES */
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#C89500;
+}
+
+/* PROCESS */
+
+.process{background:linear-gradient(135deg,#FFE9A8,#F6C453);
+
+}
+   
+
+.process h2{
+    color:#fff;
+}
+
+.steps{
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+
+.step h3{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+/* BENEFITS */
+
+.benefits-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.benefit{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    width:100%;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.benefit:hover{
+    transform:translateY(-8px);
+}
+
+.benefit h3{
+    color:;#FFE9A8
+    margin-bottom:20px;
+}
+
+.benefit li{
+    margin-bottom:15px;
+}
+
+/* REVIEW */
+
+.review{
+    background:#FFF8E5;
+}
+.review-box{
+    display:flex;
+    gap:30px;
+}
+
+.review-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.review-card h4{
+    margin-top:20px;
+    color:#F4A261;
+}
+
+/* DOWNLOAD */
+
+.download{
+    Background:linear-gradient(135deg,#FFE9A8,#F6C453);
+    color:#fff;
+    text-align:center;
+}
+
+.download h2{
+    color:#fff;
+}
+
+.download a{
+    display:inline-block;
+    margin-top:25px;
+    background:#fff;
+    color:#F4A261;
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+   background:#C9981A;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    padding:20px;
+}
+
+nav{
+    margin-top:20px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero-text{
+    width:100%;
+}
+
+.hero img{
+    width:100%;
+    margin-top:40px;
+}
+
+.features-grid{
+    grid-template-columns:1fr;
+}
+
+.steps{
+    flex-direction:column;
+    gap:30px;
+}
+
+.benefits-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.review-box{
+    flex-direction:column;
+}
+
+section{
+    padding:60px 25px;
+}
+
+.about p{
+    width:100%;
+}
+
+}
+.download-btn{
+    display:inline-block;
+    margin:20px 0;
+    padding:14px 30px;
+    background:#ff6b35;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    border-radius:10px;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+.download-btn:hover{
+    background:#e85a28;
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <div class="logo-icon">SC</div>
+    <span>Smart Canteen</span>
+</div>
+
+<nav>
+<a href="index.html">Trang chủ</a>
+<a href="gioithieu.html">Giới thiệu</a>
+<a href="tinhnang.html">Tính năng</a>
+
+<a href="LH.html">Liên hệ</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+Đặt món trước<br>
+<span>Không cần xếp hàng </span>
+</h1>
+
+<p>
+Không chỉ là một hệ thống đặt món, Smart Canteen là phong cách sống tiện lợi dành riêng cho thế hệ sinh viên năng động. Chỉ với một điểm chạm trên màn hình, toàn bộ tiện ích từ thực đơn phong phú, thanh toán bảo mật đến nhận món nhanh đều nằm gọn trong tầm tay bạn
+</p>
+
+<a href="#"
+   class="btn btn-primary"
+   download>
+    Tải ứng dụng
+</a>
+
+<a href="#" class="btn btn-secondary">Khám phá</a>
+
+</div>
+
+<div class="hero-images">
+
+<img class="hero-main"
+src="https://img.freepik.com/premium-photo/food-metal-tray-modern-school-canteen_358320-12627.jpg"
+alt="Smart Canteen">
+
+<img class="hero-small"
+src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200"
+alt="Food">
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>Tại sao nên chọn Smart Canteen?</h2>
+<div class="about-box">
+
+<p style="margin-top:20px;">
+
+Mô hình căng tin truyền thống đang ngày càng bộc lộ nhiều bất cập trước nhịp sống năng động của sinh viên hiện đại: từ cảnh chen lấn giờ cao điểm, thời gian chờ đợi quá lâu làm rút ngắn giờ nghỉ trưa, cho đến những sai sót, nhầm lẫn trong quá trình gọi món và tính tiền thủ công. <br>
+
+Smart Canteen ra đời chính là giải pháp công nghệ toàn diện nhằm tái định nghĩa hoàn toàn trải nghiệm ăn uống học đường nhờ những lợi ích vượt trội </br>
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Nhanh chóng - Tiện lợi </h2>
+
+<div class="features-grid">
+
+<div class="card">
+<h3>📱 Đặt món trước</h3>
+<p>Chọn món nhanh chóng trước giờ ăn.</p>
+</div>
+
+<div class="card">
+<h3>💳 Thanh toán Online</h3>
+<p>Thanh toán bằng QR hoặc ví điện tử.</p>
+</div>
+
+<div class="card">
+<h3>🍜 Xem thực đơn</h3>
+<p>Cập nhật thực đơn mỗi ngày.</p>
+</div>
+
+<div class="card">
+<h3>🔔 Thông báo</h3>
+<p>Thông báo khi món ăn đã hoàn thành.</p>
+</div>
+
+<div class="card">
+<h3>⭐ Đánh giá món ăn</h3>
+<p>Đánh giá chất lượng và góp ý.</p>
+</div>
+
+<div class="card">
+<h3>⏱ Tiết kiệm thời gian</h3>
+<p>Không còn phải xếp hàng dài.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="process">
+
+<h2>Quy trình sử dụng</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>1</h3>
+<p>Chọn món</p>
+</div>
+
+<div class="step">
+<h3>2</h3>
+<p>Thanh toán</p>
+</div>
+
+<div class="step">
+<h3>3</h3>
+<p>Căn tin chuẩn bị</p>
+</div>
+
+<div class="step">
+<h3>4</h3>
+<p>Nhận món</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Lợi ích</h2>
+
+<div class="benefits-container">
+
+<div class="benefit">
+
+<h3>🎓 Sinh viên</h3>
+
+<ul>
+<li>Đặt món trước mọi lúc, mọi nơi.</li>
+<li>Không cần xếp hàng vào giờ cao điểm.</li>
+<li>Thanh toán nhanh bằng QR hoặc ví điện tử.</li>
+<li>Theo dõi trạng thái đơn hàng theo thời gian thực.</li>
+<li>Đánh giá món ăn và chất lượng phục vụ.</li>
+</ul>
+
+</div>
+
+<div class="benefit">
+
+<h3>🍽️ Căng tin</h3>
+
+<ul>
+<li>Quản lý đơn hàng tập trung và chính xác.</li>
+<li>Dự báo số lượng món cần chuẩn bị.</li>
+<li>Giảm thời gian phục vụ và ùn tắc.</li>
+<li>Theo dõi doanh thu, báo cáo bán hàng.</li>
+<li>Nâng cao chất lượng phục vụ khách hàng.</li>
+</ul>
+
+</div>
+
+<div class="benefit">
+
+<h3>🏫 Nhà trường</h3>
+
+<ul>
+<li>Kiểm soát hoạt động của căng tin hiệu quả.</li>
+<li>Theo dõi doanh thu và báo cáo tổng hợp.</li>
+<li>Nâng cao trải nghiệm cho sinh viên.</li>
+<li>Hạn chế ùn tắc trong khuôn viên trường.</li>
+<li>Hỗ trợ xây dựng mô hình trường học thông minh.</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+<section class="review">
+
+<h2>Đánh giá từ đối tác </h2>
+
+<div class="review-box">
+
+<div class="review-card">
+<p>"Từ khi quản lý qua Smart Canteen, doanh thu tăng rõ rệt nhờ tối ưu hóa quy trình gọi món và giảm hẳn thời gian chờ đợi của sinh viên ."</p>
+<h4>Đại diện Căng tin khu B Trường CĐ Kinh tế Đối Ngoại </h4>
+</div>
+
+<div class="review-card">
+<p>"Hệ thống giúp nhà trường dễ dàng kiểm soát vệ sinh an toàn thực phẩm, đồng thời giải quyết triệt để tình trạng ùn tắc tại căng tin vào giờ cao điểm.."</p>
+<h4>Thầy Tô Thanh Hiếu (Trưởng Ban Quản lý Trường ĐH Ngoại Ngữ ) </h4>
+</div>
+
+<div class="review-card">
+<p>"Nhờ tính năng dự báo và thống kê đơn hàng trước, chúng tôi luôn chuẩn bị chính xác lượng nguyên liệu cần thiết, giảm thiểu tối đa lãng phí.."</p>
+<h4>Cô Mai Phương (Quản lý Bếp ăn Trung tâm Trường GTVT)</h4>
+</div>
+
+</div>
+
+</section>
+
+<section class="download">
+
+<h2>Tải Smart Canteen ngay hôm nay</h2>
+
+<p>Trải nghiệm căn tin thông minh dành cho sinh viên.</p>
+
+<a href="../Apk/Smartcanteen/SmartCanteenV6.8Plus(Fix).apk"
+   download
+   class="download-btn">
+    📱 Download APP
+</a> 
+
+</section>
+
+<footer>
+
+<p>© 2026 Smart Canteen | Website truyền thông thương hiệu</p>
+
+</footer>
+
+</body>
+</html>

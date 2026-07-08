@@ -1,0 +1,461 @@
+
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Canteen - Đặt món thông minh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Be Vietnam Pro',sans-serif;
+}
+body{
+    background:#FFFDF5;
+    color :#4E4637 ;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    background:#fff;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:28px;
+    font-weight:800;
+    color:#000000;
+}
+
+.logo-icon{
+    width:60px;
+    height:60px;
+    background:#FFC107;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    font-weight:900;
+    color:#222;
+    box-shadow:0 10px 25px rgba(255,193,7,.45);
+    transition:.3s;
+}
+
+.logo-icon:hover{
+    transform:scale(1.08) rotate(-5deg);
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:30px;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#F6C453;
+}
+.about-page{
+    padding:80px;
+}
+
+.company-box{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    background:white;
+    border-radius:25px;
+    padding:45px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.company-image img{
+    width:480px;
+    border-radius:20px;
+}
+
+.company-content h3{
+    color:#C89500;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.company-content p{
+    font-size:18px;
+    line-height:34px;
+    margin-bottom:15px;
+}
+
+.vision-mission{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    padding:40px 80px 80px;
+}
+
+.vm-card{
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.vm-card .icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.vm-card h3{
+    color:#C89500;
+    margin-bottom:20px;
+}
+
+.vm-card p{
+    line-height:32px;
+}
+
+.founder{
+    padding:80px;
+}
+
+.founder-box{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.founder-box img{
+    width:220px;
+    border-radius:50%;
+}
+
+.founder-box h3{
+    color:#C89500;
+    margin-bottom:15px;
+}
+
+.founder-box p{
+    line-height:32px;
+}
+
+.partner{
+    padding:80px;
+    text-align:center;
+}
+
+.partner-text{
+    margin-bottom:40px;
+}
+
+.partner-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:45px;
+    flex-wrap:wrap;
+}
+
+.partner-logo img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    background:white;
+    padding:18px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.partner-logo img:hover{
+    transform:translateY(-8px);
+}
+ /* FOOTER */
+
+footer{
+   background:#C9981A;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    padding:20px;
+}
+
+nav{
+    margin-top:20px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero-text{
+    width:100%;
+}
+
+.hero img{
+    width:100%;
+    margin-top:40px;
+}
+
+.features-grid{
+    grid-template-columns:1fr;
+}
+
+.steps{
+    flex-direction:column;
+    gap:30px;
+}
+
+.benefits-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.review-box{
+    flex-direction:column;
+}
+
+section{
+    padding:60px 25px;
+}
+
+.about p{
+    width:100%;
+} }
+
+/* Tiêu đề có khung tròn */
+
+
+/* ===== Tiêu đề Section nổi bật ===== */
+
+.section-title{
+    display:inline-block;
+    position:relative;
+    padding:16px 50px;
+    margin:0 auto 45px;
+
+    background:linear-gradient(135deg,#FFF7D6,#FFE7A8);
+    border:2px solid #F4C95D;
+    border-radius:60px;
+
+    font-size:42px;
+    font-weight:800;
+    color:#B8860B;
+    letter-spacing:1px;
+
+    box-shadow:0 12px 30px rgba(244,201,93,.28);
+}
+
+/* Hai đường trang trí */
+
+.section-title::before,
+.section-title::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:70px;
+    height:3px;
+    background:#F4C95D;
+    border-radius:5px;
+}
+
+.section-title::before{
+    left:-90px;
+}
+
+.section-title::after{
+    right:-90px;
+}
+
+/* Căn giữa */
+
+.founder,
+.partner{
+    text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <div class="logo-icon">SC</div>
+    <span>Smart Canteen</span>
+</div>
+
+<nav>
+<a href="index.html">Trang chủ</a>
+<a href="gioithieu.html">Giới thiệu</a>
+<a href="tinhnang.html">Tính năng</a>
+<a href="LH.html">Liên hệ</a>
+</nav>
+
+</header>
+<section class="about-page">
+
+    <h2>Về Smart Canteen</h2>
+
+    <div class="company-box">
+
+        <div class="company-image">
+            <img src="https://businesswiki.codx.vn/wp-content/uploads/2023/07/quy-trinh-lam-viec-nhom-3.jpg" alt="">
+        </div>
+
+        <div class="company-content">
+
+            <h3> Giới thiệu doanh nghiệp</h3>
+
+            <p>
+                Smart Canteen là nền tảng công nghệ được phát triển nhằm chuyển đổi mô hình
+                căn tin truyền thống thành căn tin thông minh thông qua việc ứng dụng công
+                nghệ số trong quy trình đặt món, thanh toán và quản lý vận hành.
+            </p>
+
+            <p>
+                Chúng tôi mong muốn xây dựng một hệ sinh thái phục vụ ăn uống hiện đại,
+                giúp sinh viên, nhà trường và đơn vị kinh doanh tiết kiệm thời gian,
+                nâng cao hiệu quả quản lý và cải thiện trải nghiệm sử dụng dịch vụ.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="vision-mission">
+
+<div class="vm-card">
+
+    <div class="icon">👁️</div>
+
+    <h3>Tầm nhìn</h3>
+
+    <p>
+        Trở thành nền tảng quản lý căn tin thông minh hàng đầu Việt Nam,
+        góp phần thúc đẩy quá trình chuyển đổi số trong lĩnh vực giáo dục
+        và dịch vụ ăn uống học đường.
+    </p>
+
+</div>
+
+<div class="vm-card">
+
+    <div class="icon">🚀</div>
+
+    <h3>Sứ mệnh</h3>
+
+    <p>
+        Mang đến giải pháp đặt món và thanh toán hiện đại,
+        giúp sinh viên có trải nghiệm tiện lợi,
+        đồng thời hỗ trợ các trường học và căn tin
+        nâng cao hiệu quả vận hành.
+    </p>
+
+</div>
+
+</section>
+
+<section class="founder">
+
+<h2 class="section-title">Người sáng lập </h2>
+
+
+<div class="founder-box">
+
+<img src="https://www.pace.edu.vn/uploads/news/2023/04/2-vai-tro-cua-ky-nang-lam-viec-nhom.jpg">
+
+<div>
+
+<h3>Đội ngữ sáng lập - Keep It Up  </h3>
+
+<p>
+Đội ngũ sáng lập Smart Canteen với mong muốn đưa công nghệ
+vào hệ thống căn tin trường học nhằm giải quyết tình trạng
+ùn tắc giờ cao điểm và nâng cao trải nghiệm của sinh viên.
+Dự án được hình thành từ thực tế nhu cầu của các trường đại học
+trong quá trình chuyển đổi số.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="partner">
+
+<div class="section-title">
+
+<div class="title-icon">
+
+</div>
+
+<h2 class="section-title"> Đối tác liên kết </h2>
+
+<p class="partner-text"> 
+Smart Canteen tự hào đồng hành cùng nhiều trường đại học và cao đẳng
+trong quá trình xây dựng mô hình Căn tin thông minh.
+</p>
+
+</div>
+
+<div class="partner-logo">
+
+<img src="https://cdn.haitrieu.com/wp-content/uploads/2022/12/Logo-Truong-Cao-dang-Kinh-te-Doi-ngoai.png">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGz2Zpm41QVQ4jy03R3ZvEysmkZQ6RGJh1OXNFT96MlA&s">
+
+<img src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-ueh-inkythuatso-01-08-15-22-11.jpg">
+
+<img src="https://www.senviet.art/wp-content/uploads/edd/2021/12/daihockhxhnv.jpg">
+
+<img src="https://inviva.vn/wp-content/uploads/2026/04/logo-tdt-vector-02.jpg">
+
+</div>
+
+</section>
+<footer>
+
+<p>© 2026 Smart Canteen | Website truyền thông thương hiệu</p>
+
+</footer>
+
+</body>
+</html>

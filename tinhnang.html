@@ -1,0 +1,397 @@
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Canteen - Đặt món thông minh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Be Vietnam Pro',sans-serif;
+}
+body{
+    background:#FFFDF5;
+    color;#4E4637
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    background:#fff;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:28px;
+    font-weight:800;
+    color:#000000;
+}
+
+.logo-icon{
+    width:60px;
+    height:60px;
+    background:#FFC107;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    font-weight:900;
+    color:#222;
+    box-shadow:0 10px 25px rgba(255,193,7,.45);
+    transition:.3s;
+}
+
+.logo-icon:hover{
+    transform:scale(1.08) rotate(-5deg);
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:30px;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#F6C453;
+}
+.feature-page{
+
+padding:90px 80px;
+
+background:#FFFDF5;
+
+}
+
+.feature-desc{
+
+max-width:850px;
+
+margin:20px auto 60px;
+
+text-align:center;
+
+font-size:18px;
+
+color:#666;
+
+line-height:32px;
+
+}
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+}
+
+.feature-card{
+
+background:white;
+
+border-radius:28px;
+
+padding:35px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+border-top:8px solid #F4C95D;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 45px rgba(244,201,93,.35);
+
+}
+
+.feature-top{
+
+margin-bottom:25px;
+
+padding-bottom:20px;
+
+border-bottom:1px solid #eee;
+
+}
+
+.feature-top h3{
+
+font-size:30px;
+
+color:#C9981A;
+
+margin-bottom:12px;
+
+}
+
+.feature-top p{
+
+color:#777;
+
+}
+
+.feature-card ul{
+
+list-style:none;
+
+}
+
+.feature-card li{
+
+padding:12px 0;
+
+font-size:17px;
+
+border-bottom:1px dashed #ececec;
+
+position:relative;
+
+padding-left:28px;
+
+}
+
+.feature-card li:last-child{
+
+border:none;
+
+}
+
+.feature-card li::before{
+
+content:"✔";
+
+position:absolute;
+
+left:0;
+
+color:#F4C95D;
+
+font-weight:bold;
+
+font-size:18px;
+
+}
+/* FOOTER */
+
+footer{
+   background:#C9981A;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    padding:20px;
+}
+
+nav{
+    margin-top:20px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero-text{
+    width:100%;
+}
+
+.hero img{
+    width:100%;
+    margin-top:40px;
+}
+
+.features-grid{
+    grid-template-columns:1fr;
+}
+
+.steps{
+    flex-direction:column;
+    gap:30px;
+}
+
+.benefits-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.review-box{
+    flex-direction:column;
+}
+
+section{
+    padding:60px 25px;
+}
+
+.about p{
+    width:100%;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <div class="logo-icon">SC</div>
+    <span>Smart Canteen</span>
+</div>
+
+<nav>
+<a href="index.html">Trang chủ</a>
+<a href="gioithieu.html">Giới thiệu</a>
+<a href="tinhnang.html">Tính năng</a>
+
+<a href="LH.html">Liên hệ</a>
+</nav>
+
+</header>
+<section class="feature-page">
+
+<h2 class="section-title">Tính năng nổi bật</h2>
+
+<p class="feature-desc">
+Smart Canteen cung cấp hệ sinh thái quản lý căn tin thông minh,
+giúp kết nối sinh viên, căn tin và nhà trường trên cùng một nền tảng.
+</p>
+
+<div class="feature-grid">
+
+<!-- Sinh viên -->
+
+<div class="feature-card">
+
+<div class="feature-top">
+<h3>👨‍🎓 Hỗ trợ sinh viên</h3>
+<p>Đặt món nhanh chóng ngay trên điện thoại.</p>
+</div>
+
+<ul>
+
+<li>Đăng nhập bằng mã số sinh viên</li>
+
+<li>Xem thực đơn theo ngày</li>
+
+<li>Đặt món trước</li>
+
+<li>Thanh toán QR hoặc tiền mặt</li>
+
+<li>Theo dõi trạng thái đơn hàng</li>
+
+<li>Thông báo khi món ăn hoàn thành</li>
+
+<li>Chatbot AI gợi ý món phù hợp</li>
+
+</ul>
+
+</div>
+
+<!-- Căn tin -->
+
+<div class="feature-card">
+
+<div class="feature-top">
+
+<h3>🍽️ Website quản lý căn tin</h3>
+
+<p>Hỗ trợ nhân viên vận hành hiệu quả.</p>
+
+</div>
+
+<ul>
+
+<li>Cập nhật thực đơn và giá bán</li>
+
+<li>Xác nhận đơn hàng</li>
+
+<li>Quản lý số lượng món còn lại</li>
+
+<li>Theo dõi doanh thu mỗi ngày</li>
+
+<li>Thống kê món bán chạy</li>
+
+<li>Quản lý lịch làm việc nhân viên</li>
+
+</ul>
+
+</div>
+
+<!-- Admin -->
+
+<div class="feature-card">
+
+<div class="feature-top">
+
+<h3>🏫 Hệ thống quản trị</h3>
+
+<p>Quản lý toàn bộ hoạt động căn tin.</p>
+
+</div>
+
+<ul>
+
+<li>Dashboard tổng quan</li>
+
+<li>Quản lý thực đơn và tồn kho</li>
+
+<li>Quản lý đơn hàng</li>
+
+<li>Quản lý sinh viên</li>
+
+<li>Quản lý nhân viên & phân quyền</li>
+
+<li>Báo cáo doanh thu và biểu đồ</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+<footer>
+
+<p>© 2026 Smart Canteen | Website truyền thông thương hiệu</p>
+
+</footer>
+
+</body>
+</html>

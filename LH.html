@@ -1,0 +1,409 @@
+
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liên hệ - Smart Canteen</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+    /* Bổ sung một chút định dạng nội bộ cho Form để hiển thị đẹp mắt hơn mà không phá vỡ cấu trúc CSS chung */
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: 'Be Vietnam Pro', sans-serif;
+    }
+    .contact-form button {
+        background-color: #ff6b6b; /* Bạn có thể đổi lại mã màu chủ đạo của dự án tại đây */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: 'Be Vietnam Pro', sans-serif;
+    }
+    .contact-form button:hover {
+        opacity: 0.9;
+    }
+	*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Be Vietnam Pro',sans-serif;
+}
+body{
+    background:#FFFDF5;
+    color;#4E4637
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    background:#fff;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:28px;
+    font-weight:800;
+    color:#000000;
+}
+
+.logo-icon{
+    width:60px;
+    height:60px;
+    background:#FFC107;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    font-weight:900;
+    color:#222;
+    box-shadow:0 10px 25px rgba(255,193,7,.45);
+    transition:.3s;
+}
+
+.logo-icon:hover{
+    transform:scale(1.08) rotate(-5deg);
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:30px;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#F6C453;
+}
+.about-page{
+    padding:80px;
+}
+
+.company-box{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    background:white;
+    border-radius:25px;
+    padding:45px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.company-image img{
+    width:480px;
+    border-radius:20px;
+}
+
+.company-content h3{
+    color:#C89500;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.company-content p{
+    font-size:18px;
+    line-height:34px;
+    margin-bottom:15px;
+}
+
+.vision-mission{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    padding:40px 80px 80px;
+}
+
+.vm-card{
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.vm-card .icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.vm-card h3{
+    color:#C89500;
+    margin-bottom:20px;
+}
+
+.vm-card p{
+    line-height:32px;
+}
+
+.founder{
+    padding:80px;
+}
+
+.founder-box{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.founder-box img{
+    width:220px;
+    border-radius:50%;
+}
+
+.founder-box h3{
+    color:#C89500;
+    margin-bottom:15px;
+}
+
+.founder-box p{
+    line-height:32px;
+}
+
+.partner{
+    padding:80px;
+    text-align:center;
+}
+
+.partner-text{
+    margin-bottom:40px;
+}
+
+.partner-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:45px;
+    flex-wrap:wrap;
+}
+
+.partner-logo img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    background:white;
+    padding:18px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.partner-logo img:hover{
+    transform:translateY(-8px);
+}
+ /* FOOTER */
+
+footer{
+   background:#C9981A;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    padding:20px;
+}
+
+nav{
+    margin-top:20px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero-text{
+    width:100%;
+}
+
+.hero img{
+    width:100%;
+    margin-top:40px;
+}
+
+.features-grid{
+    grid-template-columns:1fr;
+}
+
+.steps{
+    flex-direction:column;
+    gap:30px;
+}
+
+.benefits-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.review-box{
+    flex-direction:column;
+}
+
+section{
+    padding:60px 25px;
+}
+
+.about p{
+    width:100%;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <div class="logo-icon">SC</div>
+    <span>Smart Canteen</span>
+</div>
+
+<nav>
+<a href="index.html">Trang chủ</a>
+<a href="gioithieu.html">Giới thiệu</a>
+<a href="tinhnang.html">Tính năng</a>
+
+<a href="LH.html">Liên hệ</a>
+</nav>
+
+</header>
+
+<section class="about-page">
+
+    <h2>Liên hệ với chúng tôi</h2> 
+
+    <div class="company-box">
+
+        <!-- Cột bên trái: Thông tin liên hệ -->
+        <div class="company-content">
+
+            <h3>📞 Thông tin kết nối</h3>
+
+            <p>
+                Bạn là đối tác nhà trường, chủ doanh nghiệp căn tin hay sinh viên cần hỗ trợ? 
+                Hãy liên hệ ngay với đội ngũ Smart Canteen để được tư vấn và giải đáp các thắc mắc 
+                trong thời gian sớm nhất.
+            </p>
+
+            <p style="margin-top: 20px;">
+                <strong>📍 Địa chỉ văn phòng:</strong> Khu Công nghệ cao, Thủ Đức, TP. Hồ Chí Minh
+            </p>
+            
+            <p>
+                <strong>✉️ Email:</strong> support@smartcanteen.com.vn
+            </p>
+
+            <p>
+                <strong>☎️ Hotline:</strong> 1900 xxxx (8:00 - 17:00 từ Thứ 2 đến Thứ 6)
+            </p>
+
+        </div>
+
+        <!-- Cột bên phải: Form gửi thông tin liên hệ -->
+        <div class="company-content contact-form" style="border-left: 1px solid #eee; padding-left: 30px;">
+
+            <h3>✉️ Gửi lời nhắn</h3>
+
+            <form action="#" method="POST" onsubmit="alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất.'); return false;">
+                <label for="name">Họ và tên của bạn:</label>
+                <input type="text" id="name" name="name" placeholder="Ví dụ: Nguyễn Văn A" required>
+
+                <label for="email">Địa chỉ Email:</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+                <label for="message">Nội dung tin nhắn:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Nhập nội dung bạn muốn gửi đến Smart Canteen..." required></textarea>
+
+                <button type="submit">Gửi tin nhắn</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="vision-mission">
+
+<div class="vm-card">
+
+    <div class="icon">🤝</div>
+
+    <h3>Hợp tác phát triển</h3>
+
+    <p>
+        Chúng tôi luôn sẵn sàng đồng hành cùng các trường Đại học, Cao đẳng trên toàn quốc 
+        để triển khai mô hình căn tin thông minh, góp phần số hóa tiện ích học đường.
+    </p>
+
+</div>
+
+<div class="vm-card">
+
+    <div class="icon">🛠️</div>
+
+    <h3>Hỗ trợ kỹ thuật</h3>
+
+    <p>
+        Hệ thống tổng đài và đội ngũ kỹ thuật luôn túc trực để đảm bảo quá trình vận hành, 
+        đặt món và thanh toán của bạn diễn ra mượt mà, không gặp gián đoạn.
+    </p>
+
+</div>
+
+</section>
+
+<!-- Tận dụng lại section partner để làm phần bản đồ hoặc thông điệp kết nối -->
+<section class="partner">
+
+<h2>Thời gian làm việc</h2>
+
+<p class="partner-text">
+Đội ngũ chăm sóc khách hàng của Smart Canteen luôn sẵn sàng hỗ trợ bạn từ 08:00 đến 17:00, 
+các ngày từ Thứ Hai đến Thứ Sáu hàng tuần.
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Smart Canteen | Website truyền thông thương hiệu</p>
+
+</footer>
+
+</body>
+</html>
